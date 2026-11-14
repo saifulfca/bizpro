@@ -38,6 +38,11 @@ Phone, email and WhatsApp links on every page are filled in from this config. Th
 
 ## Deploying
 
+### Preview on GitHub Pages
+`.github/workflows/pages.yml` publishes **only this `website/` folder** to GitHub Pages whenever `website/` changes on `main` (or when run manually from the Actions tab). The preview address is `https://saifulfca.github.io/bizpro/`.
+
+Before it can run, GitHub Pages has to be available for the repo. GitHub Free only allows Pages on public repositories; private repositories need GitHub Pro. Then turn it on under **Settings → Pages → Build and deployment → Source: GitHub Actions**.
+
 ### Option A (recommended): upload as a static site via cPanel
 1. Zip the contents of this `website/` folder (not the folder itself).
 2. cPanel → **File Manager** → `public_html` (or the document root of bizpro.com.bd).
