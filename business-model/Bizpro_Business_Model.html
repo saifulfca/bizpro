@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Bizpro Business Model &amp; Concept Paper (Confidential)</title>
+<meta name="robots" content="noindex, nofollow">
+<style>
+  @page { size: A4; margin: 18mm 16mm 18mm 16mm; }
+  :root { --navy:#0B2545; --teal:#13A89E; --gold:#E0A526; --ink:#0F172A; --body:#334155; --muted:#64748B; --line:#E2E8F0; --mist:#F4F7FB;
+          --adv:#13A89E; --corp:#3B82F6; --realty:#E0A526; --build:#F06A3D; }
+  * { box-sizing: border-box; }
+  body { font-family: "Plus Jakarta Sans","Segoe UI",Roboto,Arial,sans-serif; color: var(--body); font-size: 10.5pt; line-height: 1.55; margin: 0; }
+  .wrap { max-width: 820px; margin: 0 auto; padding: 24px; }
+  @media print { .wrap { padding: 0; max-width: none; } }
+  h1, h2, h3, h4 { color: var(--ink); line-height: 1.25; margin: 0 0 .5em; }
+  h1 { font-size: 30pt; letter-spacing: -.02em; }
+  h2 { font-size: 17pt; margin-top: 1.6em; padding-bottom: 6px; border-bottom: 3px solid var(--gold); display: inline-block; }
+  h3 { font-size: 12.5pt; margin-top: 1.2em; }
+  h4 { font-size: 10.5pt; margin-top: 1em; }
+  p { margin: 0 0 .7em; }
+  ul, ol { margin: 0 0 .8em; padding-left: 1.3em; }
+  li { margin-bottom: .25em; }
+  table { width: 100%; border-collapse: collapse; margin: .6em 0 1em; font-size: 9.5pt; page-break-inside: avoid; }
+  th, td { border: 1px solid var(--line); padding: 6px 8px; text-align: left; vertical-align: top; }
+  th { background: var(--navy); color: #fff; font-weight: 700; }
+  tr:nth-child(even) td { background: #FAFBFD; }
+  td.n, th.n { text-align: right; white-space: nowrap; }
+  tr.total td { font-weight: 800; background: #EEF3F9 !important; color: var(--ink); }
+  .section { page-break-before: always; }
+  .avoid { page-break-inside: avoid; }
+
+  /* cover */
+  .cover { height: 257mm; display: flex; flex-direction: column; justify-content: space-between; padding: 14mm 12mm; color: #C9D6E5; border-radius: 6px;
+           background: radial-gradient(500px 300px at 90% 0%, rgba(19,168,158,.35), transparent 60%), radial-gradient(500px 300px at 0% 100%, rgba(224,165,38,.22), transparent 60%), linear-gradient(160deg,#0B2545,#071A33);
+           -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .cover h1 { color: #fff; font-size: 34pt; margin-top: 30mm; }
+  .cover .sub { font-size: 14pt; color: #B7C7D9; max-width: 140mm; }
+  .cover .meta { font-size: 9.5pt; display: grid; grid-template-columns: auto 1fr; gap: 4px 16px; }
+  .cover .meta b { color: #fff; font-weight: 600; }
+  .stamp { display: inline-block; border: 2px solid #F87171; color: #FCA5A5; font-weight: 800; letter-spacing: .14em; padding: 6px 14px; font-size: 9pt; border-radius: 4px; }
+  * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+
+  .kicker { font-size: 8.5pt; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; color: var(--teal); margin-bottom: 4px; }
+  .box { border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; margin: .6em 0 1em; background: var(--mist); page-break-inside: avoid; }
+  .box.warn { background: #FFF7ED; border-color: #FED7AA; }
+  .box.conf { background: #FEF2F2; border-color: #FECACA; }
+  .box.key { background: #ECFDF5; border-color: #A7F3D0; }
+  .box h4 { margin-top: 0; }
+  .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .grid4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
+  .wing { border-radius: 10px; padding: 10px 12px; color: #fff; page-break-inside: avoid; }
+  .wing b { display: block; font-size: 11pt; }
+  .wing small { font-size: 8.5pt; opacity: .92; line-height: 1.4; display: block; margin-top: 4px; }
+  .w-adv { background: var(--adv); } .w-corp { background: var(--corp); } .w-realty { background: #C18A12; } .w-build { background: var(--build); }
+  .canvas { display: grid; grid-template-columns: repeat(5, 1fr); grid-template-rows: auto auto auto; gap: 6px; font-size: 8.6pt; page-break-inside: avoid; }
+  .canvas div { border: 1px solid var(--line); border-radius: 8px; padding: 8px; background: #fff; }
+  .canvas h4 { margin: 0 0 4px; font-size: 9pt; color: var(--navy); text-transform: uppercase; letter-spacing: .05em; }
+  .canvas ul { padding-left: 1.1em; margin: 0; }
+  .c-kp { grid-column: 1; grid-row: 1 / span 2; } .c-ka { grid-column: 2; grid-row: 1; } .c-kr { grid-column: 2; grid-row: 2; }
+  .c-vp { grid-column: 3; grid-row: 1 / span 2; background: #FFFBEB !important; } .c-cr { grid-column: 4; grid-row: 1; } .c-ch { grid-column: 4; grid-row: 2; }
+  .c-cs { grid-column: 5; grid-row: 1 / span 2; } .c-cost { grid-column: 1 / span 3; grid-row: 3; } .c-rev { grid-column: 4 / span 2; grid-row: 3; }
+  .flow { display: flex; align-items: stretch; gap: 6px; margin: .6em 0 1em; page-break-inside: avoid; }
+  .flow div { flex: 1; background: var(--navy); color: #DCE7F3; border-radius: 8px; padding: 8px 10px; font-size: 8.8pt; position: relative; }
+  .flow div b { color: #fff; display: block; font-size: 9.5pt; }
+  .flow div.hl { background: var(--teal); }
+  .toc { columns: 2; font-size: 10pt; }
+  .toc li { break-inside: avoid; }
+  .footer-note { font-size: 8.5pt; color: var(--muted); border-top: 1px solid var(--line); margin-top: 2em; padding-top: 8px; }
+  .swatch { display: inline-block; width: 12px; height: 12px; border-radius: 3px; vertical-align: -2px; margin-right: 4px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<!-- ============================== COVER -->
+<section class="cover">
+  <div>
+    <img src="../website/assets/img/logo-white.svg" alt="Bizpro" style="height:64px">
+    <h1>Business Model &amp; Concept Paper</h1>
+    <p class="sub">A one-stop professional services firm: accounting, compliance, property brokerage and development partnership, run by a client-facing core team with a managed delivery network.</p>
+  </div>
+  <div>
+    <p><span class="stamp">CONFIDENTIAL &middot; INTERNAL USE ONLY</span></p>
+    <p style="font-size:9.5pt;max-width:150mm">This document describes Bizpro&rsquo;s internal operating and delivery model. It must not be published on the website or shared with clients, freelancers or contractors.</p>
+    <div class="meta">
+      <span>Version</span><b>1.0 &middot; November 2026</b>
+      <span>Prepared for</span><b>Bizpro partners</b>
+      <span>Trade license</span><b>TRAD/DSCC/016723/2023 (DSCC), valid to 30 June 2027</b>
+      <span>Domain</span><b>www.bizpro.com.bd</b>
+      <span>Figures</span><b>All financial figures are hypothetical planning assumptions</b>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== CONTENTS + EXEC SUMMARY -->
+<section class="section">
+  <div class="kicker">Contents</div>
+  <ol class="toc">
+    <li>Executive summary</li>
+    <li>Company profile &amp; legal status</li>
+    <li>The problem and the opportunity</li>
+    <li>Value proposition</li>
+    <li>The four business wings</li>
+    <li>Operating model: core team + delivery network</li>
+    <li>Business Model Canvas</li>
+    <li>Customer acquisition &amp; marketing</li>
+    <li>Revenue model &amp; unit economics</li>
+    <li>Three-year financial projection</li>
+    <li>Organisation &amp; governance</li>
+    <li>Quality control &amp; client protection</li>
+    <li>Regulatory &amp; risk register</li>
+    <li>Implementation roadmap</li>
+    <li>Key performance indicators</li>
+    <li>Immediate action list</li>
+    <li>Appendix A: Brand profile summary</li>
+    <li>Appendix B: Assumptions</li>
+  </ol>
+
+  <h2>1. Executive summary</h2>
+  <p><strong>Bizpro is an accounting firm at its core, diversified into the services its clients need next.</strong> Clients who trust Bizpro with their tax and accounts also need company registration, ongoing compliance, help selling property, and someone to manage construction on their land. Bizpro offers all four under one brand and one relationship.</p>
+  <div class="grid4">
+    <div class="wing w-adv"><b>Bizpro Advisory</b><small>Accounting, QuickBooks, tax, audit support, valuation, feasibility studies</small></div>
+    <div class="wing w-corp"><b>Bizpro Corporate</b><small>RJSC registration, licenses, VAT, tax, corporate accounting &amp; secretarial on monthly retainer</small></div>
+    <div class="wing w-realty"><b>Bizpro Realty</b><small>Brokerage between property owners and buyers, lead generation through digital ads</small></div>
+    <div class="wing w-build"><b>Bizpro Build</b><small>Development partner: builds on the owner&rsquo;s land at actual cost plus a fee</small></div>
+  </div>
+  <div class="box key">
+    <h4>The model in one sentence</h4>
+    <p style="margin:0">Bizpro <strong>owns the client</strong> (brand, lead generation, sales, relationship, quality sign-off and billing) and <strong>orchestrates delivery</strong> through a flexible network of vetted freelancers, partner firms, contractors and deployed staff, keeping a margin between what the client pays and what delivery costs.</p>
+  </div>
+  <p><strong>Why it can win:</strong></p>
+  <ul>
+    <li><strong>Credibility:</strong> led by a senior Chartered Accountant with 22 years of practice, with a senior Architect, an MBA income tax professional and a business graduate as partners.</li>
+    <li><strong>Asset-light:</strong> most delivery cost is variable, so the firm can scale with demand without carrying a large payroll.</li>
+    <li><strong>Cross-sell flywheel:</strong> each wing feeds the others. A tax client becomes a retainer client, a property seller, or a landowner who builds.</li>
+    <li><strong>Trust gap in the market:</strong> landowners distrust developers and SMEs struggle to find reliable accountants. A CA-led, open-book brand addresses both.</li>
+  </ul>
+  <p><strong>Hypothetical targets:</strong> net revenue of about BDT 1.26 crore in year 1, rising to about BDT 5.6 crore by year 3, with EBITDA margin growing from roughly 28% to 39% (before partner profit share and tax). See Section 10.</p>
+</section>
+
+<!-- ============================== PROFILE -->
+<section class="section">
+  <h2>2. Company profile &amp; legal status</h2>
+  <table>
+    <tr><th style="width:34%">Item</th><th>Details</th></tr>
+    <tr><td>Trading name</td><td>Bizpro (বিজপ্রো)</td></tr>
+    <tr><td>Trade license</td><td>TRAD/DSCC/016723/2023, Dhaka South City Corporation, renewed for FY 2026&ndash;27, valid until 30 June 2027</td></tr>
+    <tr><td>Nature / type on license</td><td>Sole proprietorship (একক) &middot; Business type: Consultancy (পরামর্শদাতা)</td></tr>
+    <tr><td>Business start date</td><td>18 October 2023</td></tr>
+    <tr><td>Registered address</td><td>House 21, Road 13, Block L, Flat 2/A, South Banasree, Rampura, Dhaka-1219</td></tr>
+    <tr><td>BIN (VAT)</td><td>Not shown on the license. To be obtained (see Section 16)</td></tr>
+    <tr><td>Web domain</td><td>www.bizpro.com.bd</td></tr>
+    <tr><td>Leadership</td><td>Senior Chartered Accountant (22 years) as managing partner; partners: senior Architect, income tax professional (MBA), experienced business graduate</td></tr>
+  </table>
+  <div class="box warn">
+    <h4>Structure gap to resolve</h4>
+    <p style="margin:0">The license is a <strong>sole proprietorship</strong> with a <strong>consultancy</strong> classification, while the business is described as a partnership running brokerage and construction. Before scaling, the partners should (a) sign a partnership deed or incorporate a private limited company, and (b) add the correct trade license categories (or separate licenses) for real estate brokerage and construction / development. Construction carries liability that should sit inside a limited-liability entity. See Section 13.</p>
+  </div>
+
+  <h2>3. The problem and the opportunity</h2>
+  <div class="grid2">
+    <div class="box"><h4>For SMEs and individuals</h4><ul style="margin:0">
+      <li>Books kept late or in spreadsheets; returns filed at the last minute.</li>
+      <li>Several separate vendors for registration, VAT, tax and secretarial work, and none of them owns the outcome.</li>
+      <li>Bank loan applications rejected for weak projections and feasibility reports.</li>
+      <li>Full-time qualified accountants are expensive for small firms.</li></ul></div>
+    <div class="box"><h4>For property owners</h4><ul style="margin:0">
+      <li>Selling a flat or land is slow, informal and full of time-wasting enquiries.</li>
+      <li>Owners living abroad (NRBs) cannot manage a sale or a construction project themselves.</li>
+      <li>Traditional land-share deals give the developer a large share of flats and hide the true cost.</li>
+      <li>Little trust in brokers and developers on price and quality.</li></ul></div>
+  </div>
+  <p><strong>Opportunity:</strong> a single trusted brand, led by a Chartered Accountant, that applies audit-style discipline (documentation, reconciliation, written fees) to every service, including property and construction.</p>
+
+  <h2>4. Value proposition</h2>
+  <table>
+    <tr><th>Customer</th><th>What they get</th><th>Why Bizpro</th></tr>
+    <tr><td>SME owner</td><td>Compliance and accounts handled for a fixed monthly fee, with one named contact</td><td>Partner-reviewed, deadline-tracked, cheaper than in-house staff</td></tr>
+    <tr><td>Individual taxpayer / NRB</td><td>Accurate return, wealth statement and tax advice</td><td>Senior tax professional, digital process, reminders</td></tr>
+    <tr><td>Borrower</td><td>Bank-ready feasibility, projections and valuation</td><td>CA credibility; banks know the format</td></tr>
+    <tr><td>Property seller</td><td>Faster sale to screened buyers with documents checked</td><td>Digital lead engine, finance-grade paperwork, NRB-friendly</td></tr>
+    <tr><td>Landowner</td><td>Building built on own land, open-book, owner keeps 100%</td><td>Architect-led QC, accountant-audited project ledger</td></tr>
+  </table>
+</section>
+
+<!-- ============================== WINGS -->
+<section class="section">
+  <h2>5. The four business wings</h2>
+
+  <h3 style="color:var(--adv)">5.1 Bizpro Advisory: accounting, tax &amp; assurance</h3>
+  <table>
+    <tr><th style="width:24%">Element</th><th>Description</th></tr>
+    <tr><td>Services</td><td>Bookkeeping and accounting; QuickBooks setup, migration and support; income tax filing and planning; audit preparation, internal audit and audit coordination; business and asset valuation; project profiles, feasibility studies and CMA data for bank loans</td></tr>
+    <tr><td>Customers</td><td>SMEs, startups, private limited companies, salaried and business individuals, NRBs, loan applicants</td></tr>
+    <tr><td>Pricing (hypothetical)</td><td>Individual return BDT 3,000&ndash;10,000; feasibility study BDT 40,000&ndash;1,50,000; valuation BDT 30,000+ by asset size; bookkeeping retainer from BDT 6,000/month</td></tr>
+    <tr><td>Delivery (internal)</td><td>Bizpro handles intake and client communication. Preparation work (data entry, reconciliations, draft financial models, report drafting, QuickBooks clean-up) is outsourced to vetted freelancers on Upwork / Fiverr or to partner firms. A Bizpro professional reviews and finalises every deliverable before it goes to the client.</td></tr>
+    <tr><td>Kept in-house</td><td>Client meetings, tax authority representation, signing / submission, final review, any statutory audit opinion (through an ICAB-registered firm)</td></tr>
+  </table>
+
+  <h3 style="color:var(--corp)">5.2 Bizpro Corporate: one-stop setup &amp; compliance</h3>
+  <table>
+    <tr><th style="width:24%">Element</th><th>Description</th></tr>
+    <tr><td>Services</td><td>RJSC registration (private limited, OPC, partnership, society); trade license, e-TIN, BIN, IRC / ERC; monthly VAT returns; withholding and corporate tax; corporate accounting and payroll; company secretarial from inception to dissolution (registers, minutes, AGM, annual returns, share transfers, winding up)</td></tr>
+    <tr><td>Revenue model</td><td>Monthly retainer (Starter BDT 8,000, Growth BDT 18,000, Enterprise custom, all hypothetical) plus one-off registration fees. Government fees are passed through at cost.</td></tr>
+    <tr><td>Delivery (internal)</td><td>A dedicated &ldquo;expert&rdquo; is assigned to each client. Depending on volume this is a Bizpro employee, a part-time deployed professional, or a remote freelancer working under a Bizpro email identity and Bizpro-controlled software access. The client sees one Bizpro contact and one monthly invoice.</td></tr>
+    <tr><td>Why retainers matter</td><td>Recurring revenue gives predictable cash flow and is the main source of cross-sell into the other wings.</td></tr>
+  </table>
+
+  <h3 style="color:#B7831A">5.3 Bizpro Realty: property brokerage</h3>
+  <table>
+    <tr><th style="width:24%">Element</th><th>Description</th></tr>
+    <tr><td>Role</td><td>Intermediary between owners / sellers of flats, land and commercial property and prospective buyers</td></tr>
+    <tr><td>Lead generation</td><td>Google Search and Facebook / Instagram ads per listing; property portals; WhatsApp broadcast; network channels (banks, NRB groups, existing clients); direct marketing</td></tr>
+    <tr><td>Pricing mechanism (internal)</td><td>The owner states a bottom price (the net amount they accept). Bizpro adds its margin to set the asking price and markets at that price. Bizpro&rsquo;s earning is the difference between the final sale price and the owner&rsquo;s bottom price, or an agreed commission, whichever the mandate specifies.</td></tr>
+    <tr><td>Delivery</td><td>In-house property advisors handle owners and buyers. Photography, ad management and site-visit support can be outsourced. Legal document checks through a panel lawyer.</td></tr>
+  </table>
+  <div class="box warn"><h4>Make the margin structure defensible</h4><p style="margin:0">The bottom-price model is workable only if the owner agrees to it <strong>in a written mandate</strong> that states the owner&rsquo;s net price and that Bizpro keeps the amount above it as its fee. Without that, the owner may later claim a hidden mark-up, which is a reputational and legal risk for a CA-led brand. Recommended: an exclusive mandate for 60&ndash;90 days with either (a) a disclosed net-price clause, or (b) a fixed commission (for example 1.5&ndash;3% of sale value, hypothetical) plus a performance bonus above a target price.</p></div>
+
+  <h3 style="color:var(--build)">5.4 Bizpro Build: development partner</h3>
+  <table>
+    <tr><th style="width:24%">Element</th><th>Description</th></tr>
+    <tr><td>Role</td><td>Builds residential, commercial or mixed-use buildings on behalf of the landowner, who keeps ownership of the whole building</td></tr>
+    <tr><td>Revenue model</td><td>Cost-plus: actual expenses billed as-is with receipts, plus a Bizpro construction / development fee (hypothetical 8&ndash;12% of cost, or a fixed fee per sq ft). Design and approval services billed separately or bundled.</td></tr>
+    <tr><td>Delivery (internal)</td><td>Bizpro deploys contractors, sub-contractors, site engineers and labour through contracts. Bizpro staff own owner communication, cost tracking, procurement approval and quality inspections. The partner Architect leads design and QC.</td></tr>
+    <tr><td>Cash discipline</td><td>Bizpro should never fund construction from its own balance sheet. The owner funds a separate project bank account in stages ahead of each phase; Bizpro reconciles it monthly and shares the project ledger.</td></tr>
+    <tr><td>Cross-sell</td><td>Bizpro Realty can sell the owner&rsquo;s surplus flats during construction to fund the build.</td></tr>
+  </table>
+</section>
+
+<!-- ============================== OPERATING MODEL -->
+<section class="section">
+  <h2>6. Operating model: core team + delivery network</h2>
+  <div class="box conf"><h4>Confidential: do not disclose externally</h4><p style="margin:0">The delivery network described below is an internal operating choice. Website, proposals and client communication present Bizpro as the single responsible service provider. This is not a misrepresentation as long as Bizpro genuinely takes responsibility for the result, reviews all work, and protects client data, which this section requires.</p></div>
+  <div class="flow">
+    <div class="hl"><b>1. Attract</b>Google / Facebook ads, website, referrals, network</div>
+    <div class="hl"><b>2. Convert</b>Bizpro consultation, written scope &amp; fee, engagement letter</div>
+    <div><b>3. Deliver</b>Freelancers, partner firms, contractors or deployed staff</div>
+    <div class="hl"><b>4. Review</b>Bizpro professional checks and signs off</div>
+    <div class="hl"><b>5. Deliver &amp; bill</b>Bizpro sends output, invoices client, collects</div>
+  </div>
+  <p>Teal stages are always done by Bizpro. Only stage 3 is sourced externally.</p>
+
+  <h3>6.1 What Bizpro always owns</h3>
+  <ul>
+    <li><strong>Brand and lead generation</strong> (ads, website, content, referral partners)</li>
+    <li><strong>Client relationship</strong>: every call, meeting, WhatsApp chat and email comes from a Bizpro identity</li>
+    <li><strong>Scope, price and contract</strong> with the client</li>
+    <li><strong>Quality review and sign-off</strong> of every deliverable</li>
+    <li><strong>Regulatory touchpoints</strong>: submissions, representation before NBR / RJSC / RAJUK, signing</li>
+    <li><strong>Billing and collection</strong>; vendors are never paid by the client directly</li>
+  </ul>
+
+  <h3>6.2 Delivery network</h3>
+  <table>
+    <tr><th>Source</th><th>Used for</th><th>Controls</th></tr>
+    <tr><td>Upwork / Fiverr freelancers</td><td>Bookkeeping, reconciliations, QuickBooks work, financial models, report drafting, design, ad management</td><td>Paid test task; NDA; Bizpro-owned software logins with limited roles; anonymised data where possible; payments kept on-platform per platform terms</td></tr>
+    <tr><td>Local freelancers / part-time professionals</td><td>VAT and tax preparation, on-site deployment to retainer clients</td><td>Written service agreement, confidentiality clause, Bizpro email ID, monthly performance review</td></tr>
+    <tr><td>Partner firms</td><td>Statutory audit (ICAB-registered CA firm), legal / title checks (panel lawyer), structural design review</td><td>Referral or sub-contract agreement; the licensed firm signs where the law requires</td></tr>
+    <tr><td>Contractors &amp; site staff</td><td>Civil, MEP and finishing work; site engineers; labour</td><td>Work contracts with BOQ, rates, retention money, insurance, safety plan, defect liability period</td></tr>
+  </table>
+
+  <h3>6.3 Vendor management</h3>
+  <ol>
+    <li><strong>Onboard:</strong> portfolio review, paid test task, reference check, NDA.</li>
+    <li><strong>Tier:</strong> Gold (trusted, complex work), Silver (routine), Trial. Keep at least two vendors per critical skill.</li>
+    <li><strong>Brief:</strong> standard job templates and checklists per service.</li>
+    <li><strong>Review:</strong> maker-checker. Nothing goes to a client without Bizpro review.</li>
+    <li><strong>Rate:</strong> score each job on accuracy, timeliness and communication; drop vendors below threshold.</li>
+  </ol>
+
+  <h3>6.4 Data protection for outsourced work</h3>
+  <ul>
+    <li>Work inside Bizpro-owned accounts (QuickBooks, Google Workspace / Microsoft 365) with role-based access, never on a freelancer&rsquo;s own account.</li>
+    <li>Share the minimum data needed; mask client names, NID and bank details for offshore tasks.</li>
+    <li>Revoke access at job end; keep an access log.</li>
+    <li>Client engagement letters should allow use of &ldquo;sub-contractors under Bizpro&rsquo;s supervision and confidentiality obligations&rdquo;, which protects Bizpro without naming platforms.</li>
+  </ul>
+</section>
+
+<!-- ============================== CANVAS -->
+<section class="section">
+  <h2>7. Business Model Canvas</h2>
+  <div class="canvas">
+    <div class="c-kp"><h4>Key partners</h4><ul><li>Upwork / Fiverr freelancers</li><li>Local part-time professionals</li><li>ICAB-registered audit firm</li><li>Panel lawyer</li><li>Civil contractors &amp; suppliers</li><li>Banks (loan referrals)</li><li>Property portals</li><li>NRB community groups</li></ul></div>
+    <div class="c-ka"><h4>Key activities</h4><ul><li>Lead generation</li><li>Sales &amp; scoping</li><li>Vendor orchestration</li><li>Quality review</li><li>Project &amp; cost control</li></ul></div>
+    <div class="c-kr"><h4>Key resources</h4><ul><li>CA partner credibility</li><li>Architect &amp; tax partners</li><li>Brand &amp; website</li><li>Vendor pool</li><li>CRM, templates, QC checklists</li></ul></div>
+    <div class="c-vp"><h4>Value proposition</h4><ul><li>One trusted, CA-led team for finance, compliance, property and construction</li><li>Fixed, written fees</li><li>Partner-reviewed quality</li><li>Open-book construction; owner keeps 100%</li><li>Faster property sales to screened buyers</li><li>NRB-friendly remote service</li></ul></div>
+    <div class="c-cr"><h4>Customer relationships</h4><ul><li>Dedicated named manager</li><li>WhatsApp-first communication</li><li>Monthly reports &amp; reminders</li></ul></div>
+    <div class="c-ch"><h4>Channels</h4><ul><li>Google &amp; Facebook ads</li><li>Website / SEO</li><li>Referrals &amp; banks</li><li>Property portals</li><li>Office walk-ins</li></ul></div>
+    <div class="c-cs"><h4>Customer segments</h4><ul><li>SMEs &amp; startups</li><li>Private limited companies</li><li>Individual taxpayers</li><li>Loan applicants</li><li>Property owners / sellers</li><li>Buyers</li><li>Landowners</li><li>NRBs</li></ul></div>
+    <div class="c-cost"><h4>Cost structure</h4>Variable: freelancer and partner fees, contractor supervision, ad spend, referral fees. Fixed: core staff, office, software, licenses, brand marketing. Asset-light; no construction funding on Bizpro&rsquo;s balance sheet.</div>
+    <div class="c-rev"><h4>Revenue streams</h4>Project fees (tax, valuation, feasibility) &middot; monthly retainers &middot; registration fees &middot; brokerage margin / commission &middot; construction development fee &middot; design &amp; approval fees</div>
+  </div>
+
+  <h2>8. Customer acquisition &amp; marketing</h2>
+  <h3>8.1 Funnel</h3>
+  <div class="flow">
+    <div><b>Ads &amp; content</b>Search: &ldquo;company registration Dhaka&rdquo;, &ldquo;income tax return service&rdquo;, &ldquo;flat for sale Banasree&rdquo;</div>
+    <div><b>Landing page</b>Wing page with form, WhatsApp button</div>
+    <div><b>Qualify</b>Call within 1 business day; log in CRM</div>
+    <div><b>Consult &amp; quote</b>Free 30-min consultation, written quote</div>
+    <div class="hl"><b>Engage</b>Engagement letter, advance payment</div>
+  </div>
+  <h3>8.2 Channel plan (hypothetical monthly budget, year 1)</h3>
+  <table>
+    <tr><th>Channel</th><th>Purpose</th><th class="n">BDT / month</th></tr>
+    <tr><td>Google Search ads</td><td>High-intent Advisory &amp; Corporate leads</td><td class="n">20,000</td></tr>
+    <tr><td>Facebook / Instagram ads</td><td>Brand, tax-season campaigns, NRB targeting</td><td class="n">22,000</td></tr>
+    <tr><td>Content &amp; SEO</td><td>Tax deadline guides, company registration guides, property tips</td><td class="n">8,000</td></tr>
+    <tr><td>Per-listing property ads</td><td>Charged to each Realty deal (direct cost)</td><td class="n">Per listing</td></tr>
+    <tr><td>Referral partners</td><td>Bank officers, lawyers, existing clients (per-deal referral fee)</td><td class="n">Variable</td></tr>
+    <tr class="total"><td colspan="2">Total fixed marketing (matches &ldquo;Brand marketing&rdquo; line in Section 10)</td><td class="n">50,000</td></tr>
+  </table>
+  <h3>8.3 Cross-sell flywheel</h3>
+  <p>Tax / accounts client &rarr; company registration and retainer &rarr; valuation or loan feasibility &rarr; property sale (Realty) &rarr; construction on family land (Build) &rarr; flats sold during construction (Realty) &rarr; tax on the gain (Advisory). Every client file is tagged with &ldquo;next likely need&rdquo; in the CRM.</p>
+  <h3>8.4 Seasonality</h3>
+  <p>Individual tax returns peak September&ndash;November (deadline normally 30 November). Corporate returns and audits cluster around company year-ends. Use the tax peak to acquire clients and convert them to retainers.</p>
+</section>
+
+<!-- ============================== REVENUE & UNIT ECONOMICS -->
+<section class="section">
+  <h2>9. Revenue model &amp; unit economics</h2>
+  <p>All figures below are hypothetical and should be replaced with market-tested numbers.</p>
+  <table>
+    <tr><th>Wing</th><th>Revenue stream</th><th>Price basis</th><th class="n">Target gross margin</th></tr>
+    <tr><td>Advisory</td><td>Project fees</td><td>Fixed fee per job</td><td class="n">55&ndash;65%</td></tr>
+    <tr><td>Corporate</td><td>Retainers + registration</td><td>Monthly plan; fixed registration fee + govt. fees at cost</td><td class="n">50&ndash;60%</td></tr>
+    <tr><td>Realty</td><td>Margin above owner&rsquo;s bottom price or commission</td><td>Success-based</td><td class="n">65&ndash;75%</td></tr>
+    <tr><td>Build</td><td>Development fee on actual cost</td><td>8&ndash;12% of cost or per sq ft</td><td class="n">60&ndash;70% of fee</td></tr>
+  </table>
+
+  <div class="grid2">
+    <div class="box avoid"><h4>Example: outsourced bookkeeping retainer</h4>
+      <table style="margin:0">
+        <tr><td>Client fee (Growth plan)</td><td class="n">18,000</td></tr>
+        <tr><td>Freelancer cost (approx. 30 hrs)</td><td class="n">(6,500)</td></tr>
+        <tr><td>Bizpro review time (approx. 3 hrs)</td><td class="n">(1,500)</td></tr>
+        <tr><td>Software allocation</td><td class="n">(500)</td></tr>
+        <tr class="total"><td>Contribution / month</td><td class="n">9,500 (53%)</td></tr>
+      </table></div>
+    <div class="box avoid"><h4>Example: flat sale</h4>
+      <table style="margin:0">
+        <tr><td>Owner&rsquo;s bottom (net) price</td><td class="n">1,00,00,000</td></tr>
+        <tr><td>Bizpro asking price</td><td class="n">1,06,00,000</td></tr>
+        <tr><td>Final negotiated price</td><td class="n">1,04,00,000</td></tr>
+        <tr><td>Gross spread to Bizpro</td><td class="n">4,00,000</td></tr>
+        <tr><td>Ads, photos, site visits</td><td class="n">(45,000)</td></tr>
+        <tr><td>Referral fee (if any)</td><td class="n">(50,000)</td></tr>
+        <tr class="total"><td>Contribution</td><td class="n">3,05,000 (76%)</td></tr>
+      </table></div>
+  </div>
+  <div class="box avoid"><h4>Example: 6-storey residential building (6,000 sq ft)</h4>
+    <table style="margin:0">
+      <tr><td>Actual construction cost billed to owner at cost (approx. BDT 3,600 / sq ft)</td><td class="n">2,16,00,000</td></tr>
+      <tr><td>Bizpro development fee at 10%</td><td class="n">21,60,000</td></tr>
+      <tr><td>Bizpro site supervision staff, QC testing, project accountant (approx. 18 months)</td><td class="n">(7,50,000)</td></tr>
+      <tr class="total"><td>Contribution on the project</td><td class="n">14,10,000 (65% of fee)</td></tr>
+    </table>
+    <p style="margin:.5em 0 0;font-size:9pt">Revenue recognition: for management reporting Bizpro shows the fee only. For statutory accounts, whether Bizpro is principal (gross revenue) or agent (net fee) under IFRS 15 depends on the contract terms; the CA partner should decide this when drafting the standard agreement.</p>
+  </div>
+</section>
+
+<!-- ============================== FINANCIALS -->
+<section class="section">
+  <h2>10. Three-year financial projection (hypothetical)</h2>
+  <p>BDT lakh (1 lakh = 100,000). Net revenue view: construction costs passed through to owners and government fees are excluded.</p>
+  <h3>10.1 Volume assumptions</h3>
+  <table>
+    <tr><th>Driver</th><th class="n">Year 1</th><th class="n">Year 2</th><th class="n">Year 3</th></tr>
+    <tr><td>Individual tax returns (avg BDT 5,000)</td><td class="n">300</td><td class="n">500</td><td class="n">800</td></tr>
+    <tr><td>Advisory projects: feasibility, valuation, audit support (avg BDT 60,000)</td><td class="n">30</td><td class="n">50</td><td class="n">80</td></tr>
+    <tr><td>Average active retainer clients (avg BDT 15,000 / month)</td><td class="n">15</td><td class="n">40</td><td class="n">80</td></tr>
+    <tr><td>Company registrations (avg BDT 25,000)</td><td class="n">40</td><td class="n">80</td><td class="n">120</td></tr>
+    <tr><td>Property deals closed (avg net take BDT 3 lakh)</td><td class="n">12</td><td class="n">30</td><td class="n">50</td></tr>
+    <tr><td>Construction spend managed (BDT crore), fee 10%</td><td class="n">2</td><td class="n">8</td><td class="n">15</td></tr>
+  </table>
+  <h3>10.2 Projected income statement</h3>
+  <table>
+    <tr><th>BDT lakh</th><th class="n">Year 1</th><th class="n">Year 2</th><th class="n">Year 3</th></tr>
+    <tr><td>Advisory</td><td class="n">33.0</td><td class="n">55.0</td><td class="n">88.0</td></tr>
+    <tr><td>Corporate (retainers + registrations)</td><td class="n">37.0</td><td class="n">92.0</td><td class="n">174.0</td></tr>
+    <tr><td>Realty</td><td class="n">36.0</td><td class="n">90.0</td><td class="n">150.0</td></tr>
+    <tr><td>Build (development fee)</td><td class="n">20.0</td><td class="n">80.0</td><td class="n">150.0</td></tr>
+    <tr class="total"><td>Net revenue</td><td class="n">126.0</td><td class="n">317.0</td><td class="n">562.0</td></tr>
+    <tr><td>Direct delivery cost (freelancers, deployed staff, ads per listing, site supervision)</td><td class="n">(47.6)</td><td class="n">(118.4)</td><td class="n">(211.0)</td></tr>
+    <tr class="total"><td>Gross profit</td><td class="n">78.4</td><td class="n">198.6</td><td class="n">351.0</td></tr>
+    <tr><td>&nbsp;&nbsp;Gross margin</td><td class="n">62%</td><td class="n">63%</td><td class="n">62%</td></tr>
+    <tr><td>Core staff (client managers, project accountant, admin)</td><td class="n">(24.0)</td><td class="n">(54.0)</td><td class="n">(90.0)</td></tr>
+    <tr><td>Office rent &amp; utilities</td><td class="n">(6.0)</td><td class="n">(7.0)</td><td class="n">(9.0)</td></tr>
+    <tr><td>Brand marketing, website, content</td><td class="n">(6.0)</td><td class="n">(12.0)</td><td class="n">(18.0)</td></tr>
+    <tr><td>Software &amp; tools</td><td class="n">(2.0)</td><td class="n">(3.0)</td><td class="n">(4.0)</td></tr>
+    <tr><td>Licenses, legal, professional fees, insurance</td><td class="n">(2.0)</td><td class="n">(3.0)</td><td class="n">(4.0)</td></tr>
+    <tr><td>Miscellaneous</td><td class="n">(3.0)</td><td class="n">(5.0)</td><td class="n">(7.0)</td></tr>
+    <tr class="total"><td>EBITDA (before partner profit share &amp; tax)</td><td class="n">35.4</td><td class="n">114.6</td><td class="n">219.0</td></tr>
+    <tr><td>&nbsp;&nbsp;EBITDA margin</td><td class="n">28%</td><td class="n">36%</td><td class="n">39%</td></tr>
+  </table>
+  <h3>10.3 Start-up investment (hypothetical)</h3>
+  <table>
+    <tr><th>Item</th><th class="n">BDT lakh</th></tr>
+    <tr><td>Office fit-out, furniture, laptops</td><td class="n">5.0</td></tr>
+    <tr><td>Website, brand assets, photography</td><td class="n">1.5</td></tr>
+    <tr><td>Legal setup: company / partnership, license categories, BIN, agreements</td><td class="n">1.5</td></tr>
+    <tr><td>Working capital (3 months of fixed costs)</td><td class="n">10.0</td></tr>
+    <tr class="total"><td>Total</td><td class="n">18.0</td></tr>
+  </table>
+  <p><strong>Sensitivity:</strong> Realty and Build make up about 45% of year-1 revenue and depend on a small number of deals. If both come in at half the target (BDT 28 lakh less revenue) and, conservatively, no delivery cost is saved, year-1 EBITDA falls to about BDT 7 lakh, which is still positive. Advisory and Corporate retainers should cover fixed costs on their own by month 12.</p>
+</section>
+
+<!-- ============================== ORG -->
+<section class="section">
+  <h2>11. Organisation &amp; governance</h2>
+  <table>
+    <tr><th>Role</th><th>Responsibilities</th></tr>
+    <tr><td>Managing Partner (Senior CA, 22 yrs)</td><td>Strategy, final quality sign-off on Advisory and Corporate, valuations, bank relationships, audit coordination</td></tr>
+    <tr><td>Partner, Architecture &amp; Build (Senior Architect)</td><td>Design, approvals, construction QC, contractor panel</td></tr>
+    <tr><td>Partner, Tax &amp; Compliance (Tax professional, MBA)</td><td>Tax and VAT filings, representation, retainer delivery, freelancer QC for tax work</td></tr>
+    <tr><td>Partner, Business Development (Business graduate)</td><td>Marketing and ads, CRM, sales pipeline, Bizpro Realty, vendor sourcing</td></tr>
+    <tr><td>Client managers (2 in year 1 &rarr; 6 by year 3)</td><td>Day-to-day client contact; brief and review vendors</td></tr>
+    <tr><td>Project accountant (from first Build project)</td><td>Project ledgers, monthly reconciliations, owner cost reports</td></tr>
+    <tr><td>Admin &amp; operations</td><td>Billing, collections, document control, access management</td></tr>
+  </table>
+  <p><strong>Governance:</strong> monthly partners&rsquo; meeting with a wing P&amp;L, pipeline and KPI dashboard; a written partnership deed or shareholders&rsquo; agreement covering capital, profit share, decision rights, exit and non-compete; a single approval matrix for pricing exceptions and vendor payments.</p>
+
+  <h2>12. Quality control &amp; client protection</h2>
+  <ul>
+    <li><strong>Engagement letter</strong> for every client: scope, fee, timeline, client responsibilities, confidentiality, sub-contracting clause, limitation of liability.</li>
+    <li><strong>Maker-checker</strong> on every deliverable; review checklist stored with the file.</li>
+    <li><strong>Deadline calendar</strong> per client (tax, VAT, RJSC, trade license, AGM) with 30 / 7 / 1-day reminders.</li>
+    <li><strong>Realty:</strong> written mandate, title / mutation / khatian checks by panel lawyer before marketing, buyer advance held as per agreement.</li>
+    <li><strong>Build:</strong> separate project bank account per owner, BOQ-based contracts, three quotes for major purchases, stage inspections signed by the Architect, monthly cost and photo report, 5&ndash;10% retention from contractors, insurance and site safety plan, compliance with the Bangladesh National Building Code (BNBC 2020) and approved plans.</li>
+    <li><strong>Complaints:</strong> partner-level escalation within 48 hours.</li>
+  </ul>
+</section>
+
+<!-- ============================== RISK -->
+<section class="section">
+  <h2>13. Regulatory &amp; risk register</h2>
+  <p>Items marked &ldquo;confirm&rdquo; need advice from a Bangladeshi lawyer or the relevant authority before launch. This section flags issues; it is not legal advice.</p>
+  <table>
+    <tr><th style="width:22%">Risk</th><th>Detail</th><th style="width:30%">Mitigation</th></tr>
+    <tr><td>Statutory audit signing</td><td>Statutory audits of companies must be signed by a practising chartered accountant / ICAB-registered firm. Bizpro, as a consultancy, cannot issue audit opinions.</td><td>Position as &ldquo;audit support&rdquo;; route audits through an ICAB-registered firm (the website already does this)</td></tr>
+    <tr><td>ICAB rules for the CA partner</td><td>ICAB rules may restrict members in public practice from running other businesses (e.g. brokerage, construction) or advertising. Confirm.</td><td>Confirm the partner&rsquo;s status with ICAB; keep any CA practice legally separate from Bizpro if required</td></tr>
+    <tr><td>Real estate regulation</td><td>The Real Estate Development and Management Act 2010 and its rules regulate developers and may require registration for development and brokerage activities. Confirm.</td><td>Obtain required registrations before marketing Build and Realty services</td></tr>
+    <tr><td>License category &amp; entity</td><td>Current license: sole proprietorship, consultancy. Construction liability is unlimited for a proprietor.</td><td>Incorporate Bizpro Ltd. or sign a partnership deed; add license categories</td></tr>
+    <tr><td>VAT</td><td>Consultancy, brokerage and construction services are generally subject to VAT; no BIN appears on the license.</td><td>Register for BIN; price quotes as &ldquo;excluding VAT&rdquo;</td></tr>
+    <tr><td>Tax representation</td><td>Representation before tax authorities is limited to authorised persons (e.g. income tax practitioners, CAs, lawyers).</td><td>Only authorised Bizpro partners / staff represent clients; freelancers do back-office preparation only</td></tr>
+    <tr><td>Confidentiality of outsourced data</td><td>Client financial data handled by third parties, sometimes offshore</td><td>Section 6.4 controls; NDAs; masked data; access logs</td></tr>
+    <tr><td>Vendor quality / disappearance</td><td>Freelancer misses a deadline or delivers errors</td><td>Two vendors per skill; internal buffer of 3&ndash;5 days before client deadlines; review before delivery</td></tr>
+    <tr><td>Brokerage disputes</td><td>Owner disputes the margin; buyer backs out</td><td>Written mandate with disclosed net price; advance / earnest money clauses</td></tr>
+    <tr><td>Construction cost overrun &amp; safety</td><td>Material price inflation, delays, accidents</td><td>Owner-approved budget with contingency (5&ndash;10%), monthly variance reports, insurance, safety officer on site</td></tr>
+    <tr><td>Reputation</td><td>One bad Build or Realty case can damage the accounting brand</td><td>Grow Build slowly (one project in year 1); strict QC; partner sign-off</td></tr>
+    <tr><td>Key-person dependence</td><td>Credibility rests on the CA partner</td><td>Document methods; build a second-line reviewer; key-person insurance</td></tr>
+    <tr><td>Platform terms</td><td>Upwork / Fiverr prohibit taking payment off-platform for introduced freelancers</td><td>Keep engagements on-platform or sign a direct contract only where the platform allows it</td></tr>
+  </table>
+</section>
+
+<!-- ============================== ROADMAP & KPI -->
+<section class="section">
+  <h2>14. Implementation roadmap</h2>
+  <table>
+    <tr><th>Phase</th><th>Timing</th><th>Milestones</th></tr>
+    <tr><td><strong>0. Foundation</strong></td><td>Month 0&ndash;2</td><td>Entity decision and partnership deed; BIN; license categories; engagement letter, mandate and contractor templates; website live; CRM and WhatsApp Business; first 10 vetted freelancers</td></tr>
+    <tr><td><strong>1. Core launch</strong></td><td>Month 2&ndash;6</td><td>Advisory and Corporate ads live; tax-season campaign; 10 retainer clients; QC checklists for every service</td></tr>
+    <tr><td><strong>2. Realty</strong></td><td>Month 4&ndash;9</td><td>First 15 listings, panel lawyer, listing ad playbook, first 5 deals</td></tr>
+    <tr><td><strong>3. Build pilot</strong></td><td>Month 6&ndash;12</td><td>Contractor panel, project accounting system, first owner signed, design and approval underway</td></tr>
+    <tr><td><strong>4. Scale</strong></td><td>Year 2&ndash;3</td><td>Second office or Chattogram presence (optional), NRB marketing, 80 retainers, 3&ndash;5 concurrent Build projects</td></tr>
+  </table>
+
+  <h2>15. Key performance indicators</h2>
+  <table>
+    <tr><th>Area</th><th>KPI</th><th>Target (hypothetical)</th></tr>
+    <tr><td>Marketing</td><td>Cost per qualified lead; lead-to-client conversion</td><td>&lt; BDT 800; &gt; 20%</td></tr>
+    <tr><td>Advisory</td><td>On-time filing rate; rework rate after review</td><td>100%; &lt; 10%</td></tr>
+    <tr><td>Corporate</td><td>Active retainers; monthly churn; gross margin</td><td>15 &rarr; 80; &lt; 2%; &gt; 50%</td></tr>
+    <tr><td>Realty</td><td>Days to close; listing-to-sale rate</td><td>&lt; 75 days; &gt; 40%</td></tr>
+    <tr><td>Build</td><td>Cost variance vs budget; schedule variance</td><td>&plusmn; 5%; &lt; 10%</td></tr>
+    <tr><td>Client</td><td>Net Promoter Score; clients using 2+ wings</td><td>&gt; 50; &gt; 25% by year 3</td></tr>
+    <tr><td>Finance</td><td>Debtor days; vendor cost as % of revenue</td><td>&lt; 30; &lt; 40%</td></tr>
+  </table>
+
+  <h2>16. Immediate action list</h2>
+  <ol>
+    <li>Decide the legal entity (partnership deed or private limited company) and update the trade license categories.</li>
+    <li>Register for BIN / VAT.</li>
+    <li>Confirm the ICAB position of the CA partner and the real estate registration requirements with counsel.</li>
+    <li>Approve the brand, then replace website placeholders: partner names and photos, phone, email, prices, listings, statistics and testimonials.</li>
+    <li>Draft standard documents: engagement letter, realty mandate, Build development agreement, vendor NDA and service agreement.</li>
+    <li>Set up Google Workspace on bizpro.com.bd, a CRM and WhatsApp Business.</li>
+    <li>Recruit and test the first freelancer pool (bookkeeping, QuickBooks, financial modelling, ads).</li>
+    <li>Launch Google and Facebook campaigns ahead of the tax season.</li>
+  </ol>
+</section>
+
+<!-- ============================== APPENDICES -->
+<section class="section">
+  <h2>Appendix A: Brand profile summary</h2>
+  <p>Full guidelines: <em>brand/Bizpro_Brand_Profile.pdf</em>.</p>
+  <table>
+    <tr><th style="width:26%">Element</th><th>Definition</th></tr>
+    <tr><td>Name</td><td>Bizpro (wordmark set in lowercase: <strong>biz</strong><strong style="color:var(--teal)">pro</strong>)</td></tr>
+    <tr><td>Tagline</td><td>Ledger to Landmark</td></tr>
+    <tr><td>Logo idea</td><td>Rising bars (accounts and growth) under a gold arrow that also reads as a roof line (property and building), inside a navy rounded square</td></tr>
+    <tr><td>Colours</td><td><span class="swatch" style="background:#0B2545"></span>Ledger Navy #0B2545 &middot; <span class="swatch" style="background:#13A89E"></span>Growth Teal #13A89E &middot; <span class="swatch" style="background:#E0A526"></span>Landmark Gold #E0A526. Wing accents: Advisory teal, Corporate blue #3B82F6, Realty gold, Build orange #F06A3D</td></tr>
+    <tr><td>Typeface</td><td>Plus Jakarta Sans (Google Fonts, free); fallback Segoe UI / Arial</td></tr>
+    <tr><td>Personality</td><td>Trustworthy, precise, modern, approachable</td></tr>
+    <tr><td>Voice</td><td>Plain English (and Bangla), short sentences, concrete numbers, no jargon or hype</td></tr>
+  </table>
+
+  <h2>Appendix B: Key assumptions</h2>
+  <ul>
+    <li>All prices, volumes, costs and margins are hypothetical planning figures, not market research.</li>
+    <li>Freelancer rates assume mid-level Bangladesh / South Asia rates on Upwork / Fiverr; senior specialist rates are higher.</li>
+    <li>Construction rate of about BDT 3,600 / sq ft for &ldquo;premium&rdquo; specification is a placeholder; update from current contractor quotes.</li>
+    <li>Projections exclude VAT, partner profit share, income tax and pass-through costs.</li>
+    <li>Regulatory points reflect general understanding and must be confirmed with counsel and the relevant authorities.</li>
+  </ul>
+  <p class="footer-note">Bizpro &middot; Business Model &amp; Concept Paper v1.0 &middot; Confidential &middot; Prepared November 2026. The public website (website/) intentionally omits Section 5 &ldquo;Delivery (internal)&rdquo; rows, Section 6 and the Realty margin mechanism.</p>
+</section>
+
+</div>
+</body>
+</html>
